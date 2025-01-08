@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+     <meta charset="UTF-8"> <!-- Karakter setini UTF-8 olarak ayarlıyorum -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobil uyumluluk için viewport ayarları -->
+    <title>Aksesuarlar</title> <!-- Sayfa başlığı giriyorum -->
+    <link rel="stylesheet" type="text/css"  href="stiller/hakkimizda.css"> <!--harici still sayfası tanımlıyorum-->
+</head>
+<body>
+    <div id="ana-kapsayici"> <!-- siteyi içinde barındırıcak kimliği ana-kapsayici olan bir div oluşturuyorum.-->
+        <div id="ust-bar">  <!-- Üst bar alanını kapsayan bir div oluşturuyorum. -->
+            <div class="logo"> <!-- Logoyu içeren bir div oluşturuyorum. -->
+                <h1><a href="index.html">Knight Bilgisayar</a></h1> <!-- li etiketi ile yatay menüleri oluşturuyorum a etiketi ile tıklanıldımı ilgili sayfaya yönlendirmesini sağlıyorum -->
+            </div>
+            <div class="menu">  <!-- Menü alanını kapsayan bir div oluşturuyorum. -->
+                <ul> <!-- ul li listeleme etiketleri ile diğer menüleri oluşturuyorum a etiketi ile tıklandı mı ilgili sayfaya gitmesinin sağlıyorum-->
+                    <li><a href="laptoplar.html">LAPTOPLAR</a></li>
+                    <li><a href="aksesuarlar.html">AKSESUARLAR</a></li>
+                    <li><a href="hakkimizda.html">HAKKIMIZDA</a></li>
+                    <li><a href="giris.html">GİRİŞ YAP</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="video-alani">  <!-- Video alanını içeren bir div oluşturuyorum. -->
+            <video width="1024" height="300" controls> <!-- Videonun genişlik, yükseklik ve kontrol özelliklerini ayarlıyorum. -->
+                <source src="videolar/tanitim.mp4" type="video/mp4">  <!-- Videonun dosya kaynağını ve türünü belirtiyorum. -->
+               HATA!404 EROOR!.  <!-- Tarayıcı desteklemezse görüntülenecek alternatif metin. -->
+            </video>
+        </div>
+
+        <div id="hakkimizda"> <!-- Hakkımızda bölümünü kapsayan bir div oluşturuyorum. -->
+            <h2>Knight Bilgisayar Hakkında</h2>  <!-- Hakkımızda başlığı oluşturuyorum. -->
+            <p>Knight Bilgisayar olarak, teknoloji tutkunlarının ihtiyaçlarını en üst düzeyde karşılamak için buradayız. Yüksek performanslı, dayanıklı ve şık tasarımlı notebooklarımızla, kullanıcılarımıza en iyi deneyimi sunmayı hedefliyoruz.</p>  <!-- Hakkımızda açıklama metnini ekliyorum. p etiketi ile paragraf özelliği ekliyorum-->
+            <ol> <!-- ol li etiketleri ile sıralı bir liste oluşturuyorum. -->
+                <li><b>Misyonumuz</b> müşterilerimize en son teknolojiyi, en yüksek kalite standartlarında sunarak, onların günlük yaşamlarını ve iş süreçlerini kolaylaştırmak.</p></li> <!-- Misyonumuzu yazısı ekliyorum p etiketi ile paragraf olmasını sağlıyorum b etiketi ile sadece misyonumuz yazısını kalın yapıyorum  . -->
+
+                <li><p><b>Vizyonumuz</b> teknoloji dünyasında yenilikçi çözümler sunarak, global bir marka olmak ve kullanıcılarımızın güvenini kazanmak.</p></li> <!-- Vizyonumuz yazısı ekliyorum p etiketi ile paragraf olmasını sağlıyorum b etiketi ile sadece vizyonumuz yazısını kalın yapıyorum  . -->
+            </ol>
+
+            <h3>Sıkça Sorulan Sorular (SSS)</h3> <!--  h3 etiketi ile SSS başlığını ekliyorum. -->
+            <table> <!-- table etiketi açıyorum-->
+                <div> <!-- table etiketi içine div oluşturuyorum -->
+                    <tr>
+                        <th>Soru</th> <!-- th etiketleri ile tablo başlıkları oluşturuyorum-->
+                        <th>Cevap</th> <!-- th etiketleri ile tablo başlıkları oluşturuyorum-->
+                    </tr>
+                </div>
+                <div>
+                    <tr>
+                        <td>Ürünlerin garanti süresi nedir?</td>  <!-- td etiketleri ile tablo verilerini giriyorum-->
+                        <td>Ürünlerimiz 2 yıl garantilidir.</td>  <!-- td etiketleri ile tablo verilerini giriyorum-->
+                    </tr>
+                    <tr>
+                        <td>Yedek parça temini yapılıyor mu?</td> <!-- td etiketleri ile tablo verilerini giriyorum-->
+                        <td>Evet, tüm yedek parçalar resmi mağazalarımızdan temin edilebilir.</td> <!-- td etiketleri ile tablo verilerini giriyorum-->
+                    </tr>
+                    <tr>
+                        <td>Servis süresi ne kadar sürüyor?</td> <!-- td etiketleri ile tablo verilerini giriyorum-->
+                        <td>Servis süresi ortalama 7 iş günüdür.</td> <!-- td etiketleri ile tablo verilerini giriyorum-->
+                    </tr>
+                    <tr>
+                        <td>İade politikası nasıl işliyor?</td> <!-- td etiketleri ile tablo verilerini giriyorum-->
+                        <td>Ürünlerimizi 14 gün içinde iade edebilirsiniz.</td> <!-- td etiketleri ile tablo verilerini giriyorum-->
+                    </tr>
+                <div> <!-- table etiketi içindeki div'i kapatıyorum-->
+            </table> <!-- table etiketi kapatıyorum-->
+        </div> <!-- hakkimizda divi'ini kapatıyorum -->
+ 
+        <div id="alt-menu"> <!-- Alt menü bölgesini içeren bir div oluşturuyorum. -->
+            <div class="dikeymenu"> <!-- Dikey menü için bir div oluşturuyorum. -->
+                <h3>Ürünler</h3> <!-- h3 etiketi ile Ürünler başlığı oluşturyorum. -->
+                <ul> <!-- ul li etiketleri ile dikey menü oluşturup a etiketi ile ilgili sayfaya yönlendiren bağlantı oluşturyorum. -->
+                    <li><a href="https://www.teknosa.com/laptop-notebook-c-116004">Tüm Laptoplar</a></li> 
+                    <li><a href="laptoplar.html">Oyun Bilgisayarları</a></li>
+                    <li><a href="aksesuarlar.html">Oyuncu Ekipmanları</a></li> 
+                    <li><a href="https://www.teknosa.com/gaming-laptop-c-116006001">İş Bilgisayarları</a></li> 
+            </div> <!--altmenu div'ini kapatıyorum-->
+
+            <div class="dikeymenu">  <!-- Dikey menü için bir div oluşturuyorum. -->
+                <h3>Performans Donanımları</h3> <!-- h3 etiketi ile Performans Donanımları başlığı oluşturuyorum. -->
+                <ul> <!-- ul li etiketleri ile dikey menü oluşturup a etiketi ile ilgili sayfaya yönlendiren bağlantı oluşturuyorum. -->
+                    <li><a href="https://www.mediamarkt.com.tr/tr/category/laptop-504926.html?filter=processorModel:Core%20i5&utm_content=nonbrand&utm_source=google&utm_medium=cpc&utm_campaign=rt_search_generic_nsp_na_it-kategori-notebook&gad_source=1&gclid=Cj0KCQiAvvO7BhC-ARIsAGFyToUUoqsSPt_HZ3NaUiR_E__qAjhgglyA573jfQ8RnBZOomJufCUBTMcaArbJEALw_wcB&gclsrc=aw.ds">Intel i5 İşlemcili Laptoplar</a></li> 
+                    <li><a href="https://www.mediamarkt.com.tr/?utm_content=brand&utm_source=google&utm_medium=cpc&utm_campaign=rt_shopping_generic_nsp_na_pmax-other-heybooster&gad_source=1&gclid=Cj0KCQiAvvO7BhC-ARIsAGFyToVkuXWRdtfqOqZiX6osFHS2l0pvJXBqE8UpBZzNnNBlAt4bMAxND-YaAqFIEALw_wcB&gclsrc=aw.ds">Intel i7 İşlemcili Laptoplar</a></li> 
+                    <li><a href="https://www.vatanbilgisayar.com/corei9/notebook/">Intel i9 İşlemcili Laptoplar</a></li> 
+                    <li><a href="https://www.amazon.com/3050-laptop/s?k=3050+laptop">RTX 3050'li Laptoplar</a></li> 
+                </ul> <!--ul etiketi kapatıyorum-->
+            </div> <!--dikeymenu div'ini kapatıyorum-->
+
+            <div class="dikeymenu"> <!-- Dikey menü için bir div oluşturuyorum. -->
+                <h3>Kurumsal</h3> <!-- h3 etiketi ile Kurumsal başlığı oluşturuyorum. -->
+                <ul> <!-- ul li etiketleri ile dikey menü oluşturup a etiketi ile ilgili sayfaya yönlendiren bağlantı oluşturuyorum. -->
+                    <li><a href="hakkimizda.html">Knight Hakkında</a></li>
+                    <li><a href="kvkk.pdf" target="_blank">KVKK ve Yasal Haklar</a></li> <!--a etiketi içine pfd bağlantısı ekledim bu sayede yazıya tıklanıldı mı tarayıcıda pdf açıcak, target etiketi ile pdf yan sekmede açılıcak-->
+                </ul> <!--ul etiketi kapatıyorum-->
+            </div> <!--dikeymenu div'ini kapatıyorum-->
+
+            <div class="dikeymenu"> <!-- Dikey menü için bir div oluşturuyorum. -->
+                <h3>Knight Destek</h3> <!-- h3 etiketi ile Knight Destek başlığı oluşturuyorum. -->
+                <ul> <!-- ul li etiketleri ile dikey menü oluşturup a etiketi ile ilgili sayfaya yönlendiren bağlantı oluşturuyorum. -->
+                    <li><a href="giris.html">Giriş Yap</a></li>
+                    <li><a href="mailto:bertanates23@istanbularel.edu.tr">Mail</a></li> <!-- a mailto ile bağlantıyı kendi mail adresime yönlendiriyorum-->
+                </ul> <!--ul etiketi kapatıyorum-->
+            </div> <!--dikeymenu div'ini kapatıyorum-->
+        </div> <!--altmenu div'ini kapatıyorum-->
+
+        <div id="alt-bar"> <!-footer alanı için altbar adında bir div oluşturuyorum-->
+            <p>&copy; 2025 Knight Bilgisayar. Tüm hakları saklıdır.</p> <!--p etiketleri arasında footer yazısı ekliyorum-->
+        </div> <!-altbar div'ini kapatıyorum-->
+    </div> <!-ana-kapsayici div'ini kapatıyorum-->
+</body>
+</html>

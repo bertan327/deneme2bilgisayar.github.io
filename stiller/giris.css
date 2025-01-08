@@ -1,0 +1,200 @@
+        body {
+            margin: 0; /* Sayfa kenar boşluklarını sıfırlıyorum */
+            padding: 0; /* Sayfa iç boşluklarını sıfırlıyorum */
+            font-family: Arial, sans-serif; /* Yazı tipini Arial olarak ayarlıyorum */
+            background-image: url("gorseller/arkaplan.jpg"); /* Arka plan resmini ekliyorum */
+            background-size: cover; /* Arka planı kapsayacak şekilde ayarlıyorum */
+            color: #ffffff;  /* Yazı rengini beyaz yapıyorum */
+        }
+
+        #ana-kapsayici {
+            width: 1024px; /* Ana kapsayıcının genişliğini ayarlıyorum */
+            margin: 0 auto; /* Kapsayıcı alanı ekrana ortalamak için 0 auto; değeri giriyorum */
+            overflow: hidden; /* Taşmaları engellemek için hidden komutu kullanıyorum */
+        }
+
+        #ust-bar {
+            background-color: #000000; /* Üst barın arka plan rengini siyah yapıyorum */ 
+            padding: 20px 20px;  /* İç boşlukları ayarlıyorum */
+            overflow: hidden; /* Taşmaları engellemek için hidden komutu kullanıyorum */
+        }
+
+        .logo {
+            float: left; /* Logoyu sola hizalıyorum */
+        }
+
+        .logo h1 {
+            font-size: 26px; /* Marka ismimi logo olarak kullancağım için yazı boyutunu ayarlıyorum */
+            margin: 0; /* Kenar boşluklarını sıfırlıyorum */
+            color: #ffffff; /* Yazı rengini beyaz yapıyorum */
+        }
+
+        .logo h1 a {
+            text-decoration: none; /* Link alt çizgisini kaldırıyorum */
+            color: #ffffff; /* Link yazı rengini beyaz yapıyorum */
+        }
+
+        .menu {
+            overflow: hidden; /* Taşmaları engellemek için hidden komutu kullanıyorum */
+        }
+
+.menu ul {
+    list-style: none; /* Liste işaretlerini kaldırıyorum */
+    margin: 0; /* Kenar boşluklarını sıfırlıyorum */
+    padding: 0; /* İç boşlukları sıfırlıyorum */
+    text-align: center; /* Menü içindeki verileri ortalıyorum */
+    position: relative; /* Giriş Yap menüsünü sağa hizalıyorum */
+    overflow: hidden; /* Burada da Float temizlemek için kullanıyorum */
+}
+
+.menu ul li {
+    display: inline-block; /* Yatay menü için menüleri yan yana diziyorum */
+    margin: 0 15px;  /* Menü öğeleri arasına boşluk ekliyorum */
+}
+
+.menu ul li:last-child {
+    position: absolute; /* Sadece Giriş Yap menüsünü sağa hizalamak için "absolute" komutu kullanıyorum */
+    right: 0; /* Sağa hizalı olması için 0 değeri giriyorum */
+    margin: 0; /* Boşluk olmasını istemediğim için 0 değeri girdim */
+    background-color: green; /* Arka plan rengini yeşil veriyorum */
+}
+
+.menu ul li a {
+    text-decoration: none; /* Link alt çizgisini kaldırıyorum */
+    color: #ffffff; /* Link yazı rengini beyaz yapıyorum */
+    padding: 10px 15px; /* Link iç boşluklarını ayarlıyorum */
+    display: block; /* Linkleri blok öğe yapıyorum */
+}
+
+.menu ul li a:hover {
+    color: green; /* Üzerine gelindiğinde yazı rengini yeşil olmasını istiyorum */
+    background-color: rgba(255, 255, 255, 0.2); /* Üzerine gelindiğinde arka plan rengini yarı saydam beyaz yapıyorum */
+}
+
+ h1 {
+            text-align: center; /* Başlığı ortalıyorum */
+            color: #ffffff; /* Başlığın yazı rengini beyaz yapıyorum */
+            margin-bottom: 20px; /* Başlığın alt boşluğunu ayarlıyorum */
+        }
+
+        form {
+            display: block; /* Formu blok olarak gösteriyorum */
+                 
+        }
+
+        label {
+            font-weight: bold; /* Etiketlerin kalın olmasını sağlıyorum */
+        }
+
+        input[type="text"], 
+        input[type="password"], 
+        textarea, 
+        select {
+            width: 100%; /* Genişliği %100 olarak ayarlıyorum */
+            padding: 10px; /* İç boşluk ekliyorum */
+            border: 1px solid #555; /* Kenarlıgı düz çizgi ve rengini koyu gri yapıyorum */
+            border-radius: 5px; /* Köşeleri yuvarlatıyorum */
+            background-color: #222; /* Arka plan rengini koyu gri yapıyorum */
+            color: #ffffff; /* Yazı rengini beyaz yapıyorum */
+        }
+
+        textarea {
+            resize: vertical; /* Sadece dikey boyutlandırmayı aktif ediyorum */
+            height: 100px; /* Yüksekliği ayarlıyorum */
+        }
+
+        input[type="checkbox"], 
+        input[type="radio"] {
+            margin-right: 10px; /* Sağ tarafa boşluk ekliyorum */
+        }
+
+        .form-grup {
+            margin-bottom: 15px; /* Form grubu alt boşluğunu ayarlıyorum */
+        }
+
+        .form-grup.inline {
+            display: block; /* Grup içeriğini blok yapıyorum */
+            
+        }
+
+        input[type="submit"], 
+        input[type="reset"] {
+            padding: 10px 20px; /* Buton iç boşluklarını ayarlıyorum */
+            border: none; /* Buton kenarlarını kaldırıyorum */
+            border-radius: 5px; /* Buton köşelerini yuvarlatıyorum */
+            cursor: pointer; /* Fare imlecini el simgesi yapıyorum */
+            font-weight: bold; /* Yazıyı kalın yapıyorum */
+        }
+
+        input[type="submit"] {
+            background-color: green; /* Gönder butonunun arka plan rengini yeşil yapıyorum */
+            color: #ffffff; /* Gönder butonunun yazı rengini beyaz yapıyorum */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0a7d0a; /* Fare üzerine geldiğinde arka plan rengini değiştiriyorum */
+        }
+
+        input[type="reset"] {
+            background-color: #555; /* Temizle butonunun arka plan rengini koyu gri yapıyorum */
+            color: #ffffff; /* Temizle butonunun yazı rengini beyaz yapıyorum */
+        }
+
+        input[type="reset"]:hover {
+            background-color: #777; /* Fare üzerine geldiğinde arka plan rengini değiştiriyorum */
+        }
+
+        
+       #alt-bar {
+            border-top: 2px solid green; /* Üst kenarına yeşil bir çizgi ekliyorum */
+            background-color: #1f1f1f;  /* Arka plan rengini koyu gri yapıyorum */
+            text-align: center;  /* Metni ortalıyorum */
+            padding: 10px 0; /* İç boşlukları ayarlıyorum */
+            margin-top: 20px; /* Üst kenar boşluğunu ayarlıyorum */
+        }
+
+        #alt-bar p {
+            margin: 0; /* Kenar boşluklarını sıfırlıyorum */
+            font-size: 14px; /* Yazı boyutunu ayarlıyorum */
+            color: #bbbbbb; /* Yazı rengini açık gri yapıyorum */
+
+        }
+
+        #alt-menu {
+            margin-top: 20px; 20px; /* Üst kenar boşluğunu ayarlıyorum */
+            overflow: hidden; /* Taşmaları gizliyorum */
+        }
+
+         .dikeymenu {
+            float: left; /* Menü başlıkları sola hizalıyorum */
+            width: 24%; /* Genişliklerini %24 yapıyorum */
+            margin-right: 1%; /* Sağ kenar boşluğunu ayarlıyorum */
+        }
+
+        .dikeymenu:last-child {
+            margin-right: 0; /* Son menünün sağ kenar boşluğunu sıfırlıyorum */
+        }
+
+        .dikeymenu h3 {
+            font-size: 18px; /* Başlık yazı boyutunu ayarlıyorum */
+            color: #ffffff; /* Yazı rengini beyaz yapıyorum */
+            margin-bottom: 10px;  /* Alt kenar boşluğunu ayarlıyorum */
+        }
+
+        .dikeymenu ul {
+            list-style: none; /* Ul etiketi ile dikey menü hazırlayıp,liste işaretlerini kaldırıyorum */
+            padding: 0; /* İç boşlukları sıfırlıyorum */
+            margin: 0;  /* Kenar boşluklarını sıfırlıyorum */
+        }
+
+        .dikeymenu ul li {
+            margin-bottom: 5px; /* Alt kenar boşluğunu ayarlıyorum */
+        }
+
+        .dikeymenu ul li a {
+            text-decoration: none; /* Link alt çizgisini kaldırıyorum */
+            color: #bbbbbb; /* Link yazı rengini açık gri yapıyorum */
+        }
+.dikeymenu ul li a:hover {
+    color: green; /* Üzerine gelindiğinde yazı rengini yeşil yapıyorum */
+}

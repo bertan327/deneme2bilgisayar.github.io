@@ -1,0 +1,266 @@
+        body {
+            margin: 0; /* Sayfa kenar boşluklarını sıfırlıyorum */
+            padding: 0; /* Sayfa iç boşluklarını sıfırlıyorum */
+            font-family: Arial, sans-serif; /* Yazı tipini Arial olarak ayarlıyorum */
+            background-color: #2c2c2c;
+            color: #ffffff;  /* Yazı rengini beyaz yapıyorum */
+        }
+
+       #ana-kapsayici {
+            width: 1024px; /* Ana kapsayıcının genişliğini ayarlıyorum */
+            margin: 0 auto; /* Kapsayıcı alanı ekrana ortalamak için 0 auto; değeri giriyorum */
+            overflow: hidden; /* Taşmaları engellemek için hidden komutu kullanıyorum */
+        }
+
+        @media only screen and (max-width: 1024px) {
+            /* Ekran genişliği 1024 pikselden küçük olduğunda */
+            #ana-kapsayici {
+                width: 100%; /* Kapsayıcı genişliğini yüzdeye çeviriyorum */
+                padding: 0 10px; /* Yan boşluk ekliyorum */
+            }
+        }
+
+        #ust-bar {
+            background-color: #000000; /* Üst barın arka plan rengini siyah yapıyorum */ 
+            padding: 20px 20px;  /* İç boşlukları ayarlıyorum */
+            overflow: hidden; /* Taşmaları engellemek için hidden komutu kullanıyorum */
+        }
+
+        .logo {
+            float: left; /* Logoyu sola hizalıyorum */
+        }
+
+        .logo h1 {
+            font-size: 26px; /* Marka ismimi logo olarak kullanacağım için yazı boyutunu ayarlıyorum */
+            margin: 0; /* Kenar boşluklarını sıfırlıyorum */
+            color: #ffffff; /* Yazı rengini beyaz yapıyorum */
+        }
+
+        .logo h1 a {
+            text-decoration: none; /* Link alt çizgisini kaldırıyorum */
+            color: #ffffff; /* Link yazı rengini beyaz yapıyorum */
+        }
+
+        .menu {
+            overflow: hidden; /* Taşmaları engellemek için hidden komutu kullanıyorum */
+        }
+
+.menu ul {
+    list-style: none; /* Liste işaretlerini kaldırıyorum */
+    margin: 0; /* Kenar boşluklarını sıfırlıyorum */
+    padding: 0; /* İç boşlukları sıfırlıyorum */
+    text-align: center; /* Menü içindeki verileri ortalıyorum */
+    position: relative; /* Giriş Yap menüsünü sağa hizalıyorum */
+    overflow: hidden; /* Burada da Float temizlemek için kullanıyorum */
+}
+
+.menu ul li {
+    display: inline-block; /* Yatay menü için menüleri yan yana diziyorum */
+    margin: 0 15px;  /* Menü öğeleri arasına boşluk ekliyorum */
+}
+
+.menu ul li:last-child {
+    position: absolute; /* Sadece Giriş Yap menüsünü sağa hizalamak için "absolute" komutu kullanıyorum */
+    right: 0; /* Sağa hizalı olması için 0 değeri giriyorum */
+    margin: 0; /* Boşluk olmasını istemediğim için 0 değeri girdim */
+    background-color: green; /* Arka plan rengini yeşil veriyorum */
+}
+
+.menu ul li a {
+    text-decoration: none; /* Link alt çizgisini kaldırıyorum */
+    color: #ffffff; /* Link yazı rengini beyaz yapıyorum */
+    padding: 10px 15px; /* Link iç boşluklarını ayarlıyorum */
+    display: block; /* Linkleri blok öğe yapıyorum */
+}
+
+.menu ul li a:hover {
+    color: green; /* Üzerine gelindiğinde yazı rengini yeşil olmasını istiyorum */
+    background-color: rgba(255, 255, 255, 0.2); /* Üzerine gelindiğinde arka plan rengini yarı saydam beyaz yapıyorum */
+}
+
+        @media only screen and (max-width: 700px) {
+            /* 700 pikselden küçük ekranlar için */
+            .menu ul li {
+                display: block; /* Menü elemanlarını dikey hizalıyorum */
+                margin: 5px 0; /* Menü elemanları arasına dikey boşluk ekliyorum */
+            }
+
+            .menu ul {
+                text-align: center; /* Menü içeriğini tekrar ortalıyorum */
+            }
+
+            .menu {
+                float: none; /* Menü hizalamasını sıfırlıyorum */
+            }
+        }
+
+        /* Slider */
+        #slider {
+            width: 100%; /* Slider genişliğini yüzdeye çeviriyorum */
+            height: 300px; /* Slider yüksekliğini ayarlıyorum */
+            margin: 20px 0; /* Üst ve alt boşluk ekliyorum */
+            position: relative; /* Slider içeriğini konumlandırmak için */
+        }
+
+        #slider img {
+            width: 100%; /* Slider içeriğini kapsayıcıya sığdırıyorum */
+            height: 100%; /* Görsel oranını koruyorum */
+            position: absolute; /* Görselleri üst üste yerleştiriyorum */
+            animation: slide 5s infinite; /* Slider geçiş animasyonu */
+        }
+
+        #slider img:nth-child(1) {
+            animation-delay: 0s; /* İlk görsel için animasyon başlangıcını tanımlıyorum */
+        }
+
+        #slider img:nth-child(2) {
+            animation-delay: 3s; /* İkinci görsel için animasyon başlangıcını tanımlıyorum */
+        }
+
+        #slider img:nth-child(3) {
+            animation-delay: 6s; /* Üçüncü görsel için animasyon başlangıcını tanımlıyorum */
+        }
+
+        @keyframes slide {
+            /* Slider geçiş animasyonunu tanımlıyorum */
+            0% { opacity: 0; }
+            25% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        /* Tanıtım Alanı */
+        #tanitim {
+            padding: 20px; /* İç boşluk ekliyorum */
+            background-color: #1f1f1f; /* Arka plan rengini koyu gri yapıyorum */
+            text-align: center; /* Metni ortalıyorum */
+            margin-bottom: 20px; /* Alt boşluk ekliyorum */
+        }
+
+        #tanitim h2 {
+            font-size: 24px; /* Başlık boyutunu ayarlıyorum */
+            margin-bottom: 10px; /* Alt boşluk ekliyorum */
+        }
+
+        #tanitim p {
+            font-size: 16px; /* Metin boyutunu ayarlıyorum */
+            line-height: 1.6; /* Satır aralığını ayarlıyorum */
+            color: #bbbbbb; /* Yazı rengini açık gri yapıyorum */
+        }
+
+        /* Ürün Galerisi */
+        #urunler {
+            padding: 20px; /* İç boşluk ekliyorum */
+            background-color: #1f1f1f; /* Arka plan rengini koyu gri yapıyorum */
+        }
+
+        #urunler h2 {
+            font-size: 24px; /* Başlık boyutunu ayarlıyorum */
+            margin-bottom: 20px; /* Alt boşluk ekliyorum */
+        }
+
+        div.galeri {
+            border: 1px solid #ccc; /* Çerçeve ekliyorum */
+            text-align: center; /* Galeri içeriğini ortalıyorum */
+        }
+
+        div.galeri:hover {
+            border: 2px solid green; /* Hover üzerine gelindiğinde çerçeve rengi */
+        }
+
+        div.galeri img {
+            width: 100%; /* Görsellerin genişliğini kutuya sığdırıyorum */
+            height: auto; /* Görsellerin oranını koruyorum */
+        }
+
+        div.yazi {
+            padding: 15px; /* Görseller altına açıklama metni ekliyorum */
+            color: #ffffff; /* Yazı rengini beyaz yapıyorum */
+        }
+
+        .resim {
+            float: left; /* Galeri elemanlarını sola hizalıyorum */
+            width: 22%; /* Genişliği yüzdeye çeviriyorum */
+            padding: 0 14px; /* Yan boşluk ekliyerek resim kutularını ortaya hizalıyorum */
+            margin-bottom: 20px; /* Alt boşluk ekliyorum */
+        }
+
+        @media only screen and (max-width: 700px) {
+            .resim {
+                width: 49%; /* Daha dar ekranlarda genişlik değişimi */
+                margin-bottom: 10px; /* Alt boşluk değişimi */
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .resim {
+                width: 100%; /* Daha küçük ekranlarda tam genişlik */
+            }
+        }
+
+        .temizle::after {
+            content: ""; /* Float temizlemek için */
+            clear: both;
+            display: block;
+        }
+
+        /* Alt Menü */
+        #alt-menu {
+            padding: 20px 0; /* İç boşluk ekliyorum */
+            overflow: hidden; /* Taşmaları gizliyorum */
+        }
+
+        .dikeymenu {
+            float: left; /* Menüyü sola hizalıyorum */
+            width: 24%; /* Genişliği yüzdeye çeviriyorum */
+            margin-right: 1%; /* Sağ boşluk ekliyorum */
+        }
+
+        .dikeymenu:last-child {
+            margin-right: 0; /* Son elemanda sağ boşluğu sıfırlıyorum */
+        }
+
+        .dikeymenu h3 {
+            font-size: 18px; /* Başlık boyutunu ayarlıyorum */
+            margin-bottom: 10px; /* Alt boşluk ekliyorum */
+        }
+
+        .dikeymenu ul {
+            list-style: none; /* Liste işaretlerini kaldırıyorum */
+            margin: 0; /* Kenar boşluklarını sıfırlıyorum */
+            padding: 0; /* İç boşluklarını sıfırlıyorum */
+        }
+
+        .dikeymenu ul li {
+            margin-bottom: 5px; /* Alt boşluk ekliyorum */
+        }
+
+        .dikeymenu ul li a {
+            text-decoration: none; /* Link alt çizgisini kaldırıyorum */
+            color: #bbbbbb; /* Link yazı rengini açık gri yapıyorum */
+        }
+
+        .dikeymenu ul li a:hover {
+            color: green; /* Üzerine gelindiğinde yazı rengini yeşil yapıyorum */
+        }
+
+        @media only screen and (max-width: 700px) {
+            .menu-column {
+                width: 100%; /* Menüyü tam genişlik yapıyorum */
+                margin-bottom: 20px; /* Alt boşluk ekliyorum */
+            }
+        }
+
+        /* Alt Bar */
+        #alt-bar {
+            background-color: #000; /* Arka plan rengini siyah yapıyorum */
+            text-align: center; /* Metni ortalıyorum */
+            padding: 10px 0; /* İç boşluk ekliyorum */
+            border-top: 2px solid green; /* Üst sınır ekliyorum */
+        }
+
+        #alt-bar p {
+            margin: 0; /* Kenar boşluklarını sıfırlıyorum */
+            font-size: 14px; /* Yazı boyutunu ayarlıyorum */
+            color: #bbbbbb; /* Yazı rengini açık gri yapıyorum */
+        }

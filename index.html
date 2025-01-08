@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+     <meta charset="UTF-8"> <!-- Karakter setini UTF-8 olarak ayarlıyorum -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobil uyumluluk için viewport ayarları -->
+    <title>KNIGHT BİLGİSAYAR</title> <!-- Sayfa başlığı giriyorum -->
+     <link rel="stylesheet" type="text/css"  href="stiller/index.css"> <!--harici still sayfası tanımlıyorum-->
+</head>
+<body>
+    <div id="ana-kapsayici"> <!-- Sayfanın tamamını saran ana kapsayıcı -->
+        <div id="ust-bar">  <!-- Üst menü çubuğu -->
+            <div class="logo"> <!-- Logo alanı -->
+                <h1><a href="index.html">Knight Bilgisayar</a></h1> <!-- Anasayfa bağlantısı -->
+            </div>
+            <div class="menu">  <!-- Menü alanı -->
+                <ul> <!-- Menü listesi -->
+                    <li><a href="laptoplar.html">LAPTOPLAR</a></li> <!-- Laptoplar sayfasına bağlantı -->
+                    <li><a href="aksesuarlar.html">AKSESUARLAR</a></li> <!-- Aksesuarlar sayfasına bağlantı -->
+                    <li><a href="hakkimizda.html">HAKKIMIZDA</a></li> <!-- Hakkımızda sayfasına bağlantı -->
+                    <li><a href="giris.html">GİRİŞ YAP</a></li> <!-- Giriş yap sayfasına bağlantı -->
+                </ul>
+            </div>
+        </div>
+
+        <div id="slider"> <!-- Slider alanı için kimlik tanımlıyorum -->
+            <img src="gorseller/slider1.jpg" alt="Slide 1">  <!--img etiketi ile slider görselleri yüklüyorum-->
+            <img src="gorseller/slider2.jpg" alt="Slide 2">  <!--img etiketi ile slider görselleri yüklüyorum-->
+            <img src="gorseller/slider3.jpg" alt="Slide 3">  <!--img etiketi ile slider görselleri yüklüyorum-->
+        </div>
+
+        <div id="tanitim"> <!-- web sitem için tanitim adında id tanımlıyorum -->
+            <h2>Knight Bilgisayar Dünyasına Hoş Geldiniz</h2> <!-- h2 etiketi ile başlık ekliyorum -->
+            <p>Knight Bilgisayar, en yeni teknolojiyi ve üstün tasarımı bir araya getiriyor. Yüksek performanslı ürünlerimizle hayallerinizin ötesine geçin.</p> <!--p etiketi ile paragraf özelliği vererek yazı ekliyorum -->
+        </div>
+
+        <div id="urunler"> <!-- ürün resimlerine genel css vermek için urunler id tanımlıyorum -->
+            <h2>Öne Çıkan Ürünler</h2> <!-- Ürün başlığı ekliyorum -->
+            <div class="resim"> <!-- resimleri css ile hizalamak için resim adında sınıf tanımlıyorum -->
+                <div class="galeri"> <!-- resimlere galeri özelliği vermek için galeri adında sınnıf tanımlıyorum -->
+                   <a href="https://www.itopya.com/asus-tuf-gaming-f15-fx507zc4-hn211-i5-12500h-8gb-ddr4-512-gb-ssd-rtx3050-gddr6-4gb-156-full-hd-fre_u26553"> <img src="gorseller/laptop1.png" alt="Laptop 1"> </a> <!-- img src ile ürün resmini yüklüyorum --> <!--a etiketi ilgili sayfaya yönlendiriyorum-->
+                    <div class="yazi">Oyun Fırtınası</div> <!-- Ürün açıklaması ekliyorum -->
+                </div>
+            </div>
+            <div class="resim"> <!-- resimleri css ile hizalamak için resim adında sınıf tanımlıyorum -->
+                <div class="galeri"> <!-- resimlere galeri özelliği vermek için galeri adında sınnıf tanımlıyorum -->
+                    <a href="https://www.itopya.com/lenovo-loq-15irx9-i7-13650hx-8gb-ddr5-512gb-ssd-rtx4050-gddr6-6gb-105w-156-fhd-ips-144hz-g-sync-_u26204"> <img src="gorseller/laptop2.png" alt="Laptop 2"> </a> <!-- img src ile ürün resmini yüklüyorum -->  <!--a etiketi ilgili sayfaya yönlendiriyorum-->
+                    <div class="yazi">Gamer'ın Rüyası</div> <!-- Ürün açıklaması ekliyorum -->
+                </div>
+            </div>
+            <div class="resim"> <!-- resimleri css ile hizalamak için resim adında sınıf tanımlıyorum -->
+                <div class="galeri"> <!-- resimlere galeri özelliği vermek için galeri adında sınnıf tanımlıyorum -->
+                    <a href="https://www.monsternotebook.com.tr/oyuncu-klavyesi/pusat-rapid-pro-mekanik-oyuncu-klavyesi-siyah/"> <img src="gorseller/aksesuar3.png" alt="Aksesuar 1"> </a> <!-- img src ile ürün resmini yüklüyorum -->  <!--a etiketi ilgili sayfaya yönlendiriyorum-->
+                    <div class="yazi">Renk Fırtınası</div> <!-- Ürün açıklaması ekliyorum -->
+                </div>
+            </div>
+            <div class="resim"> <!-- resimleri css ile hizalamak için resim adında sınıf tanımlıyorum -->
+                <div class="galeri"> <!-- resimlere galeri özelliği vermek için galeri adında sınnıf tanımlıyorum -->
+                    <a href="https://www.monsternotebook.com.tr/oyuncu-klavyesi/pusat-rapid-ultra-mekanik-oyuncu-klavyesi-siyah/"> <img src="gorseller/aksesuar4.png" alt="Aksesuar 2"> </a> <!-- img src ile ürün resmini yüklüyorum -->  <!--a etiketi ilgili sayfaya yönlendiriyorum-->
+                    <div class="yazi">Parlayan Yıldız</div> <!-- Ürün açıklaması ekliyorum -->
+                </div>
+            </div>
+            <div class="temizle"></div> <!-- Float temizlemek için div id tanımlıyorum -->
+        </div>
+
+       <div id="alt-menu"> <!-- Alt menü bölgesini içeren bir div oluşturuyorum. -->
+            <div class="dikeymenu"> <!-- Dikey menü için bir div oluşturuyorum. -->
+                <h3>Ürünler</h3> <!-- h3 etiketi ile Ürünler başlığı oluşturyorum. -->
+                <ul> <!-- ul li etiketleri ile dikey menü oluşturup a etiketi ile ilgili sayfaya yönlendiren bağlantı oluşturuyorum. -->
+                    <li><a href="https://www.teknosa.com/laptop-notebook-c-116004">Tüm Laptoplar</a></li> 
+                    <li><a href="laptoplar.html">Oyun Bilgisayarları</a></li>
+                    <li><a href="aksesuarlar.html">Oyuncu Ekipmanları</a></li> 
+                    <li><a href="https://www.teknosa.com/gaming-laptop-c-116006001">İş Bilgisayarları</a></li> 
+            </div> <!--altmenu div'ini kapatıyorum-->
+
+            <div class="dikeymenu">  <!-- Dikey menü için bir div oluşturuyorum. -->
+                <h3>Performans Donanımları</h3> <!-- h3 etiketi ile Performans Donanımları başlığı oluşturuyorum. -->
+                <ul> <!-- ul li etiketleri ile dikey menü oluşturup a etiketi ile ilgili sayfaya yönlendiren bağlantı oluşturuyorum. -->
+                    <li><a href="https://www.mediamarkt.com.tr/tr/category/laptop-504926.html?filter=processorModel:Core%20i5&utm_content=nonbrand&utm_source=google&utm_medium=cpc&utm_campaign=rt_search_generic_nsp_na_it-kategori-notebook&gad_source=1&gclid=Cj0KCQiAvvO7BhC-ARIsAGFyToUUoqsSPt_HZ3NaUiR_E__qAjhgglyA573jfQ8RnBZOomJufCUBTMcaArbJEALw_wcB&gclsrc=aw.ds">Intel i5 İşlemcili Laptoplar</a></li> 
+                    <li><a href="https://www.mediamarkt.com.tr/?utm_content=brand&utm_source=google&utm_medium=cpc&utm_campaign=rt_shopping_generic_nsp_na_pmax-other-heybooster&gad_source=1&gclid=Cj0KCQiAvvO7BhC-ARIsAGFyToVkuXWRdtfqOqZiX6osFHS2l0pvJXBqE8UpBZzNnNBlAt4bMAxND-YaAqFIEALw_wcB&gclsrc=aw.ds">Intel i7 İşlemcili Laptoplar</a></li> 
+                    <li><a href="https://www.vatanbilgisayar.com/corei9/notebook/">Intel i9 İşlemcili Laptoplar</a></li> 
+                    <li><a href="https://www.amazon.com/3050-laptop/s?k=3050+laptop">RTX 3050'li Laptoplar</a></li> 
+                </ul> <!--ul etiketi kapatıyorum-->
+            </div> <!--dikeymenu div'ini kapatıyorum-->
+
+            <div class="dikeymenu"> <!-- Dikey menü için bir div oluşturuyorum. -->
+                <h3>Kurumsal</h3> <!-- h3 etiketi ile Kurumsal başlığı oluşturuyorum. -->
+                <ul> <!-- ul li etiketleri ile dikey menü oluşturup a etiketi ile ilgili sayfaya yönlendiren bağlantı oluşturuyorum. -->
+                    <li><a href="hakkimizda.html">Knight Hakkında</a></li>
+                    <li><a href="kvkk.pdf" target="_blank">KVKK ve Yasal Haklar</a></li> <!--a etiketi içine pfd bağlantısı ekledim bu sayede yazıya tıklanıldı mı tarayıcıda pdf açıcak, target etiketi ile pdf yan sekmede açılıcak-->
+                </ul> <!--ul etiketi kapatıyorum-->
+            </div> <!--dikeymenu div'ini kapatıyorum-->
+
+            <div class="dikeymenu"> <!-- Dikey menü için bir div oluşturuyorum. -->
+                <h3>Knight Destek</h3> <!-- h3 etiketi ile Knight Destek başlığı oluşturyorum. -->
+                <ul> <!-- ul li etiketleri ile dikey menü oluşturup a etiketi ile ilgili sayfaya yönlendiren bağlantı oluşturuyorum. -->
+                    <li><a href="giris.html">Giriş Yap</a></li>
+                    <li><a href="mailto:bertanates23@istanbularel.edu.tr">Mail</a></li> <!-- a mailto ile bağlantıyı kendi mail adresime yönlendiriyorum-->
+                </ul> <!--ul etiketi kapatıyorum-->
+            </div> <!--dikeymenu div'ini kapatıyorum-->
+        </div> <!--altmenu div'ini kapatıyorum-->
+
+        <div id="alt-bar"> <!-footer alanı için altbar adında bir div oluşturuyorum-->
+            <p>&copy; 2025 Knight Bilgisayar. Tüm hakları saklıdır.</p> <!--p etiketleri arasında footer yazısı ekliyorum-->
+        </div> <!-altbar div'ini kapatıyorum-->
+    </div> <!-ana-kapsayici div'ini kapatıyorum-->
+</body>
+</html>

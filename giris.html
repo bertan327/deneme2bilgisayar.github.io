@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+     <meta charset="UTF-8"> <!-- Karakter setini UTF-8 olarak ayarlıyorum -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobil uyumluluk için viewport ayarları -->
+    <title>GİRİŞ YAP</title> <!-- Sayfa başlığı giriyorum -->
+     <link rel="stylesheet" type="text/css"  href="stiller/giris.css"> <!--harici still sayfası tanımlıyorum-->
+     <style type="text/css">
+             body {            
+            background-image: url("gorseller/arkaplan.jpg"); /* Arka plan resmini ekliyorum */
+            background-size: cover; /* Arka planı kapsayacak şekilde ayarlıyorum */
+             }
+
+     </style>
+    
+</head>
+<body>
+    <div id="ana-kapsayici"> <!-- siteyi içinde barındırıcak kimliği ana-kapsayiic olan bir div oluşturuyorum.-->
+        <div id="ust-bar">  <!-- Üst bar alanını kapsayan bir div oluşturuyorum. -->
+            <div class="logo"> <!-- Logoyu içeren bir div oluşturuyorum. -->
+                <h1><a href="index.html">Knight Bilgisayar</a></h1> <!-- li etiketi ikle yatay menüleri oluşturyorum a etiketi tile tıklandımı ilgili sayfaya yönlendirmesini saplıyorum -->
+            </div>
+            <div class="menu">  <!-- Menü alanını kapsayan bir div oluşturuyorum. -->
+                <ul> <!-- ul li listeleme etiketleri ile diğer menüleri oluşturyorum a etiketi ile tıklandı mı ilgili safyaya gitmesinin sağlıyorum-->
+                    <li><a href="laptoplar.html">LAPTOPLAR</a></li>
+                    <li><a href="aksesuarlar.html">AKSESUARLAR</a></li>
+                    <li><a href="hakkimizda.html">HAKKIMIZDA</a></li>
+                    <li><a href="giris.html">GİRİŞ YAP</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <h1>İletişim Formu</h1> <!-- h1 etikertleri arasında form başlığı oluşturuyorum -->
+        <form action="#" method="post"> <!-- Form başlangıcı -->
+            <div class="form-grup"> <!-- form etiketlerini yazmak için div oluşturuyorum -->
+                <label for="isim">İsim:</label> <!-- label etiketleri içerisinde isim yazısı yazıyorum-->
+                <input type="text" id="isim" name="isim" placeholder="İsminizi giriniz" required> <!-- isim yazı alanı oluşturuyorum placeholder etiketi kutuya yer tutucu metin ekliyorum required komutu ile zorunlu doldurma şartı ekliyorum -->
+            </div>
+
+            <div class="form-grup"> <!-- form etiketlrini yazmak için div oluşturuyorum --> 
+                <label for="sifre">Şifre:</label> <!-- label etiketleri içerisinde sifre etiketi yazıyorum  -->
+                <input type="password" id="sifre" name="sifre" placeholder="Şifrenizi giriniz" required> <!-- Şifre giriş alanı type="password" yazıyorum bu sayede şifre girişlerinde yıldız işareti çıkıcak,place holder ile kutuya yer tutucu metin ekliyorum, required komutu ile zorunlu doldurma şartı ekliyorum -->
+            </div>
+
+            <div class="form-grup"> <!-- Cinsiyet seçimi için grup alanı oluşturuyorum -->
+                <label>Cinsiyet:</label> <!-- label etiketleri arasında cinsiyet yazısı yazıyorum --> 
+                <div class="form-grup inline"> <!-- Inline ile seçenekleri yan yana getiriyorum -->
+                    <input type="radio" id="erkek" name="cinsiyet" value="erkek"> <!-- radio button ile Erkek seçimi ekliyorum -->
+                    <label for="erkek">Erkek</label> <!-- label etiketleri arasında Erkek yazısı ekliyorum -->
+                    <input type="radio" id="kadin" name="cinsiyet" value="kadın"> <!-- radio button ile Kadın seçimi ekliyorum -->
+                    <label for="kadin">Kadın</label> <!-- label etiketleri arasında Kadın yazısı ekliyorum -->
+                </div>
+            </div>
+
+            <div class="form-grup"> <!-- İlgi alanları için grup alanı oluşturuyorum -->
+                <label for="ilgi-alanlari">İlgi Alanları:</label> <!-- label etiketleri arasında İlgi alanları yazısı oluşturuyorum-->
+                <div class="form-grup inline"> <!-- Inline ile seçenekleri yan yana hizalıyorum -->
+                    <input type="checkbox" id="spor" name="ilgi-alanlari" value="spor"> <!-- checkbox ile birden fazla seçilecek şekilde seçenekleri oluşturuyorum -->
+                    <label for="spor">Spor</label> <!-- label etiketleri arasında Spor yazısı oluşturyorum-->
+                    <input type="checkbox" id="oyun" name="ilgi-alanlari" value="oyun"> <!-- checkbox ile birden fazla seçilecek şekilde seçenekleri oluşturuyorum -->
+                    <label for="oyun">Oyun</label> <!-- label etiketleri arasında Oyun yazısı oluşturuyorum-->
+                    <input type="checkbox" id="teknoloji" name="ilgi-alanlari" value="teknoloji">  <!-- checkbox ile birden fazla seçilecek şekilde seçenekleri oluşturuyorum -->
+                    <label for="teknoloji">Teknoloji</label> <!-- label etiketleri arasında Teknoloji yazısı oluşturuyorum-->
+                </div>
+            </div>
+
+            <div class="form-grup"> <!-- Mesaj için grup alanı oluşturuyorum -->
+                <label for="mesaj">Mesajınız:</label> <!-- label etiketi arasında Mesaj yazısı oluşturuyorum -->
+                <textarea id="mesaj" name="mesaj" placeholder="Mesajınızı yazınız"></textarea> <!-- Mesaj alanı girmesi için textarea etiketi kullanıyorum -->
+            </div>
+
+            <div class="form-grup"> <!-- Konu seçimi için grup oluştuyorum -->
+                <label for="konu">Konu:</label> <!-- label etiketleri arasında Konu yazısı oluşturuyorum-->
+                <select id="konu" name="konu"> <!-- Konu seçimi -->
+                    <option value="soru">Soru</option> <!-- Option etiketi ile açılır seçim alanı oluşturuyorum. value etiketi ile Soru seçeneğini ekliyorum -->
+                    <option value="sikayet">Şikayet</option> <!-- Option etiketi ile açılır seçim alanı oluşturuyorum. value etiketi ile Şikayet seçeneğini ekliyorum -->
+                    <option value="oneri">Öneri</option> <!-- Option etiketi ile açılır seçim alanı oluşturuyorum. value etiketi ile Öneri seçeneğini ekliyorum -->
+                </select>
+            </div>
+
+            <div class="form-grup"> <!-- Gönder ve Temizle butonları için grup oluşturuyorum -->
+                <input type="submit" value="Kayıt Ol"> <!-- input ile buton oluşturuyorum,type submit ile Kayıt Ol butonu oluşturuyorum -->
+                <input type="reset" value="Sıfırla"> <!-- input ile buton oluştuyorum, type reset ile Sıfırla butonu oluşturuyorum -->
+            </div>
+        </form>
+          
+          <div id="alt-menu"> <!-- Alt menü bölgesini içeren bir div oluşturuyorum. -->
+            <div class="dikeymenu"> <!-- Dikey menü için bir div oluşturuyorum. -->
+                <h3>Ürünler</h3> <!-- h3 etiketi ile Ürünler başlığı oluşturyorum. -->
+                <ul> <!-- ul li etiketleri ile dikey menü oluşturup a etiketi ile ilgili sayfaya yönlendiren bağlantı oluşturyorum. -->
+                    <li><a href="https://www.teknosa.com/laptop-notebook-c-116004">Tüm Laptoplar</a></li> 
+                    <li><a href="laptoplar.html">Oyun Bilgisayarları</a></li>
+                    <li><a href="aksesuarlar.html">Oyuncu Ekipmanları</a></li> 
+                    <li><a href="https://www.teknosa.com/gaming-laptop-c-116006001">İş Bilgisayarları</a></li> 
+            </div> <!--altmenu div'ini kapatıyorum-->
+
+            <div class="dikeymenu">  <!-- Dikey menü için bir div oluşturuyorum. -->
+                <h3>Performans Donanımları</h3> <!-- h3 etiketi ile Performans Donanımları başlığı oluşturuyorum. -->
+                <ul> <!-- ul li etiketleri ile dikey menü oluşturup a etiketi ile ilgili sayfaya yönlendiren bağlantı oluşturuyorum. -->
+                    <li><a href="https://www.mediamarkt.com.tr/tr/category/laptop-504926.html?filter=processorModel:Core%20i5&utm_content=nonbrand&utm_source=google&utm_medium=cpc&utm_campaign=rt_search_generic_nsp_na_it-kategori-notebook&gad_source=1&gclid=Cj0KCQiAvvO7BhC-ARIsAGFyToUUoqsSPt_HZ3NaUiR_E__qAjhgglyA573jfQ8RnBZOomJufCUBTMcaArbJEALw_wcB&gclsrc=aw.ds">Intel i5 İşlemcili Laptoplar</a></li> 
+                    <li><a href="https://www.mediamarkt.com.tr/?utm_content=brand&utm_source=google&utm_medium=cpc&utm_campaign=rt_shopping_generic_nsp_na_pmax-other-heybooster&gad_source=1&gclid=Cj0KCQiAvvO7BhC-ARIsAGFyToVkuXWRdtfqOqZiX6osFHS2l0pvJXBqE8UpBZzNnNBlAt4bMAxND-YaAqFIEALw_wcB&gclsrc=aw.ds">Intel i7 İşlemcili Laptoplar</a></li> 
+                    <li><a href="https://www.vatanbilgisayar.com/corei9/notebook/">Intel i9 İşlemcili Laptoplar</a></li> 
+                    <li><a href="https://www.amazon.com/3050-laptop/s?k=3050+laptop">RTX 3050'li Laptoplar</a></li> 
+                </ul> <!--ul etiketi kapatıyorum-->
+            </div> <!--dikeymenu div'ini kapatıyorum-->
+
+            <div class="dikeymenu"> <!-- Dikey menü için bir div oluşturuyorum. -->
+                <h3>Kurumsal</h3> <!-- h3 etiketi ile Kurumsal başlığı oluşturuyorum. -->
+                <ul> <!-- ul li etiketleri ile dikey menü oluşturup a etiketi ile ilgili sayfaya yönlendiren bağlantı oluşturuyorum. -->
+                    <li><a href="hakkimizda.html">Knight Hakkında</a></li>
+                    <li><a href="kvkk.pdf" target="_blank">KVKK ve Yasal Haklar</a></li> <!--a etiketi içine pfd bağlantısı ekledim bu sayede yazıya tıklanıldı mı tarayıcıda pdf açıcak, target etiketi ile pdf yan sekmede açılıcak-->
+                </ul> <!--ul etiketi kapatıyorum-->
+            </div> <!--dikeymenu div'ini kapatıyorum-->
+
+            <div class="dikeymenu"> <!-- Dikey menü için bir div oluşturuyorum. -->
+                <h3>Knight Destek</h3> <!-- h3 etiketi ile Knight Destek başlığı oluşturuyorum. -->
+                <ul> <!-- ul li etiketleri ile dikey menü oluşturup a etiketi ile ilgili sayfaya yönlendiren bağlantı oluşturuyorum. -->
+                    <li><a href="giris.html">Giriş Yap</a></li>
+                    <li><a href="mailto:bertanates23@istanbularel.edu.tr">Mail</a></li> <!-- a mailto ile bağlantıyı kendi mail adresime yönlendiriyorum-->
+                </ul> <!--ul etiketi kapatıyorum-->
+            </div> <!--dikeymenu div'ini kapatıyorum-->
+        </div> <!--altmenu div'ini kapatıyorum-->
+
+        <div id="alt-bar"> <!-footer alanı için altbar adında bir div oluşturuyorum-->
+            <p>&copy; 2025 Knight Bilgisayar. Tüm hakları saklıdır.</p> <!--p etiketleri arasında footer yazısı ekliyorum-->
+        </div> <!-altbar div'ini kapatıyorum-->
+    </div> <!-ana-kapsayici div'ini kapatıyorum-->
+</body>
+</html>
