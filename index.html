@@ -1,107 +1,832 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html>
 <head>
-     <meta charset="UTF-8"> <!-- Karakter setini UTF-8 olarak ayarlıyorum -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobil uyumluluk için viewport ayarları -->
-    <title>KNIGHT BİLGİSAYAR</title> <!-- Sayfa başlığı giriyorum -->
-     <link rel="stylesheet" type="text/css"  href="stiller/index.css"> <!--harici still sayfası tanımlıyorum-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+
+		}
+
+		body{
+			background: #0c0c0c;
+			color: white;
+			font-family: 'Roboto', sans-serif;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		p {
+			line-height: 1.6;
+		}
+
+		header{
+			background: #0c0c0c;
+			display: flex;
+			justify-content: space-between;
+			padding: 0 20px;
+			border-bottom: 5px solid #7cf03d;
+			height: 80px;
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			z-index: 1000;
+			width: 100%;
+			align-items: center;
+		}
+		.logo {
+			font-weight: 700;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 24px;
+			
+			transition: color 0.3s ease;
+		}
+		.logo:hover{
+			color: #7cf03d;
+		}
+		.menu{
+			display: inline-block;
+			align-content: center;
+			flex-direction: row;
+		}
+		.menu a{
+
+			text-decoration: none;
+			padding: 10px 0;
+			font-weight: 600;
+			transition: color 0.3s ease;
+			color: #7cf03d;
+			margin: 0 20PX;
+
+		}
+		.menu a:hover{
+			color: white;
+		}
+		section {
+			padding: 100px 0;
+			margin: 0 auto;
+			max-width: 1200px;
+		}
+
+		#hakkimda{
+			height: auto;
+			display: flex;
+			align-items: center;
+			margin: 50px auto 0px;
+			justify-content: center;
+			border-bottom: 5px solid #7cf03d;
+					}
+		.hakkimda-text{
+			width: 600px;
+			margin: 30px 0px 0px;
+
+		}
+
+		#hakkimda h1{
+			font-size: 50px;
+			}
+
+			#hakkimda h5{
+				align-items: center;
+				margin: 0 0 20px;
+				color: #7cf03d;
+			}
+
+			.kapsayici{
+				font-size: 15px;
+				margin-top: 30px;
+				padding: 12px 25px;
+				display: inline-block;
+				border-radius: 10px;
+				background: #7cf03d;
+				text-decoration: none;
+				font-weight: 600;
+				text-decoration: none;
+				color: black;
+				box-shadow: 0 0 20px rgba(124, 240, 61, 0.5);
+			}
+
+		.kapsayici:hover{
+		background: white;
+		color: #7cf03d;
+		}
+
+		.social-media{
+			margin-top: 5px;
+			display: flex;
+			color: white;
+		}
+		.social-media a{
+			text-decoration: none;
+			color: white;
+			padding: 10px 10px;
+			font-size: 20px;	
+		}
+
+		.social-media i{
+			margin-left: 8px;
+			padding-bottom: 5px;
+			border-bottom: 2px solid  #7cf03d;
+
+		}
+
+
+		.social-media a:hover{
+			color: #7cf03d;;
+		}
+
+
+			.img-kapsayici{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.img-kapsayici .img-kutu{
+				margin:50px 30px;
+				padding: 5px;
+				position: relative;
+				width: 350px;
+				height: 350px;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				justify-content: center;
+				align-items: center;
+				overflow: hidden;
+				background: transparent;
+				box-shadow: 0 0 20px rgba(124, 240, 61, 0.5);
+			}
+			.img-kapsayici .img-kutu::before{
+				content: '';
+				position: absolute;
+				top: -50%;
+				left: -50%;
+				width: 200%;
+				height: 200%;
+				background: conic-gradient(#7cf03d, transparent, transparent, transparent, #7cf03d);
+				animation: rotateBorder 4s linear infinite;
+				z-index: 1;
+			}
+
+			.img-kapsayici .img-kutu .img-item{
+				width: calc(100% - 10px);
+				height: calc(100% - 10px);
+				background: #0c0c0c;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				overflow: hidden;
+				z-index: 2;
+				border: 2px solid #0c0c0c;
+			}
+
+			.img-kapsayici .img-kutu .img-item img{
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			mix-blend-mode: lighten;
+			filter: grayscale(100%);
+			transition: filter 0.3s ease;
+			margin: 10px;
+			}
+			.img-kapsayici .img-kutu .img-item img:hover{
+				filter: grayscale(0%);
+			}
+
+			@keyframes rotateBorder {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+
+		#egitim{
+			padding-top: 100px;
+			padding-bottom: 100px;
+			border-bottom: 5px solid #7cf03d;
+			position: relative;
+			padding-bottom: 150px;
+		}
+
+		.egitim-kapsayici{
+			display: flex;
+			justify-content: space-between;
+			
+			padding: 50px 0 0px;
+			width: max-content;
+			min-width: 100%;
+		}
+
+		.egitim-bilgiler{
+			border-radius: 10px;
+			background: #1a1a1a;
+			border: 1px solid #333;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			padding: 20px;
+			text-align: center;
+			margin: 0 15px;
+			min-width: 280px;
+			max-width: 350px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+			height: 200px;
+			z-index: 1;
+		}
+
+		.egitim-bilgiler:hover{
+			transform: translateY(-10px);
+			box-shadow: 0 10px 25px rgba(124, 240, 61, 0.3);
+		}
+
+		
+
+		.egitim-bilgiler h3{
+			
+			font-size: 20px;
+			color: white;
+			margin-bottom: 5px;
+		}
+
+		.egitim-bilgiler p {
+			font-size: 15px;
+			color: #ccc;
+			margin-bottom: 5px;
+		}
+
+		.egitim-bilgiler .duration {
+			font-size: 12px;
+			color: #aaa;
+			font-weight: 500;
+		}
+
+		.egitim-bilgiler .icon {
+			font-size: 35px;
+			color: #7cf03d;
+			margin-bottom: 10px;
+		}
+
+		.egitim-bilgiler:nth-child(odd) {
+			top: -100px;
+		}
+		.egitim-bilgiler:nth-child(even) {
+			top: 100px;
+		}
+
+
+
+		/* Section Headings */
+		.basliklar {
+			text-align: center;
+			margin-bottom: 60px;
+			font-size: 40px;
+			color: #7cf03d;
+			position: relative;
+			padding-bottom: 10px;
+		}
+		.basliklar::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 80px;
+			height: 4px;
+			background: white;
+			border-radius: 5px;
+		}
+
+		#yetenekler{
+			border-bottom: 5px solid #7cf03d;
+		}
+
+		.yetenekler-kapsayici{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 40px;
+		}
+
+		.yetenek-kategori{
+			background: #1a1a1a;
+			padding: 30px;
+			border-radius: 10px;
+			flex: 1;
+			min-width: 300px;
+			max-width: 550px;
+			border: 1px solid #333;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.yetenek-kategori:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 10px 25px rgba(124, 240, 61, 0.3);
+		}
+
+		.yetenek-kategori h3 {
+			font-size: 28.8px;
+			color: #7cf03d;
+			margin-bottom: 25px;
+			text-align: center;
+			position: relative;
+			padding-bottom: 10px;
+		}
+
+		.yetenek-kategori h3::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 50px;
+			height: 2px;
+			background: white;
+			border-radius: 5px;
+		}
+
+		.yetenek-kategori i{
+			color:#7cf03d;
+		}
+
+		.yetenek-kategori li{
+			font-size: 18px;
+			list-style: none;
+			padding: 10px;
+		}
+
+		#hizmetlerim{
+			border-bottom: 5px solid #7cf03d;
+
+		}
+
+		.hizmet-kapsayici{
+			display: grid;
+			grid-template-columns: 250px 250px 250px 250px;
+			gap: 30px;
+			justify-content: space-between;
+
+		}
+
+		.hizmetler{
+			background: #1a1a1a;
+			padding: 40px;
+			border-radius: 10px;
+			text-align: center;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			border: 1px solid #333;
+
+		}
+		.hizmetler:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 10px 25px rgba(124, 240, 61, 0.3);
+		}
+
+		.hizmetler i{
+			font-size: 56px;
+			color: #7cf03d;
+			margin-bottom: 20px;
+		}
+
+		.hizmetler h3{
+			font-size: 25px;
+			margin-bottom: 15px;
+			color: white;
+		}
+
+		.hizmetler p{
+			font-size: 16px;
+			color: #ccc;
+		}
+
+		
+		.calismalar-kapsayici{
+			display: grid;
+			grid-template-columns: 400px 400px 400px ;
+			gap: 30px;
+			justify-content: center;
+      }
+
+      .calismalarim{
+
+      		background: #1a1a1a;
+			border-radius: 10px;
+			overflow: hidden;
+			position: relative;
+			border: 1px solid #333;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .calismalarim:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 10px 25px rgba(124, 240, 61, 0.3);
+		}
+
+		.calismalarim img {
+			width: 100%;
+			height: 400px;
+			object-fit: cover;
+			display: block;
+			transition: transform 0.4s ease;
+		}
+		.calismalarim:hover img {
+			transform: scale(1.05);
+			filter: grayscale(50%);
+
+		}
+
+		.calismalar-info{
+			margin-left: 10px;
+		}
+
+		.calismalar-info h3 {
+
+			font-size: 24px;
+			margin: 10px 0 10px;
+			color: #7cf03d;
+		}
+
+		.calismalar-info p {
+			font-size: 14px;
+			color: #ccc;
+			margin-bottom: 15px;
+		}
+
+
+
+		.btn-view{
+			display: inline-block;
+			margin-bottom: 10px;
+			background: #7cf03d;
+			padding: 10px;
+			font-size: 16px;
+			font-weight: 600;
+			text-decoration: none;
+			color: black;
+		}
+
+		.btn-view:hover{
+			background: white;
+
+		}
+
+		
+
+/* Footer */
+		footer {
+			background: #1a1a1a;
+			color: #ccc;
+			text-align: center;
+			padding: 30px 30px;
+			border-top: 5px solid #7cf03d;
+			font-size: 0.9em;
+		}
+
+		footer p{
+			padding: 20px 0 0;
+		}
+		footer .footer-links a {
+			color: #7cf03d;
+			text-decoration: none;
+			margin: 0 20px;
+			transition: color 0.3s ease;
+		}
+		footer .footer-links a:hover {
+			color: white;
+		}
+
+
+		@media (max-width: 768px) {
+			
+			header {
+				flex-direction: column;
+				height: auto;
+				padding: 15px 0;
+			}
+
+			.logo {
+				margin-bottom: 10px;
+			}
+			.menu a {
+				font-size: 12px;
+				margin: 0 5px;
+			}
+			
+			#hakkimda {
+				flex-direction: column;
+				text-align: center;
+			}
+			.hakkimda-text {
+				width: 90%;
+				margin: 0 auto;
+			}
+			#hakkimda h1 {
+				font-size: 36px;
+			}
+
+			.social-media{
+			margin-top: 5px ;
+			display: flex;
+		justify-content: center;
+			color: white;
+		}
+			.img-kapsayici {
+				margin-top: 20px;
+			}
+			.img-kapsayici .img-kutu {
+				margin: 20px 0;
+				width: 250px;
+				height: 250px;
+			}
+
+			.yetenekler-kapsayici {
+				flex-direction: column;
+			}
+			.yetenek-kategori {
+				min-width: unset;
+				max-width: 100%;
+			}
+			
+			.hizmet-kapsayici,
+			.calismalar-kapsayici {
+				grid-template-columns: 1fr;
+			}
+			
+			.calismalarim img {
+				height: auto;
+			}
+
+			footer .footer-links {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+		}
+
+		@media (max-width: 480px) {
+
+			.social-media{
+			margin-top: 5px ;
+			display: flex;
+		justify-content: center;
+			color: white;
+		}
+
+			.menu a {
+				margin: 0 3px;
+			}
+			.yetenek-kategori ul li {
+				font-size: 16px;
+			}
+		}
+
+
+
+
+
+	</style>
 </head>
 <body>
-    <div id="ana-kapsayici"> <!-- Sayfanın tamamını saran ana kapsayıcı -->
-        <div id="ust-bar">  <!-- Üst menü çubuğu -->
-            <div class="logo"> <!-- Logo alanı -->
-                <h1><a href="index.html">Knight Bilgisayar</a></h1> <!-- Anasayfa bağlantısı -->
-            </div>
-            <div class="menu">  <!-- Menü alanı -->
-                <ul> <!-- Menü listesi -->
-                    <li><a href="laptoplar.html">LAPTOPLAR</a></li> <!-- Laptoplar sayfasına bağlantı -->
-                    <li><a href="aksesuarlar.html">AKSESUARLAR</a></li> <!-- Aksesuarlar sayfasına bağlantı -->
-                    <li><a href="hakkimizda.html">HAKKIMIZDA</a></li> <!-- Hakkımızda sayfasına bağlantı -->
-                    <li><a href="giris.html">GİRİŞ YAP</a></li> <!-- Giriş yap sayfasına bağlantı -->
-                </ul>
-            </div>
-        </div>
+<header>
+	<div class="logo">BERTAN ATEŞ</div>
+	<nav class="menu">
+		<a href="#hakkimda">HAKKIMDA</a>
+			<a href="#yetenekler">YETENEKLERİM</a>
+			<a href="#hizmetlerim">HİZMETLERİM</a>
+			<a href="#calismalar">PORTFOLİO</a>
+	</nav>
+</header>
 
-        <div id="slider"> <!-- Slider alanı için kimlik tanımlıyorum -->
-            <img src="gorseller/slider1.jpg" alt="Slide 1">  <!--img etiketi ile slider görselleri yüklüyorum-->
-            <img src="gorseller/slider2.jpg" alt="Slide 2">  <!--img etiketi ile slider görselleri yüklüyorum-->
-            <img src="gorseller/slider3.jpg" alt="Slide 3">  <!--img etiketi ile slider görselleri yüklüyorum-->
-        </div>
+<section id="hakkimda">
+	<div class="hakkimda-text">
+		<h1>Merhaba Ben BERTAN</h1>
+		<h5>Designer & Developper</h5>
+		<p> Merhaba, ben Bertan Ateş. İstanbul’da yaşıyorum ve 21 yaşındayım. 2025 yılında Arel Üniversitesi Grafik Tasarım bölümünden 3,75 ortalama ile mezun oldum. Aynı üniversitede Bilgisayar Programcılığı bölümünde çift anadal yaparak eğitimime devam ediyorum. Tasarım ve programlama konularında bilgi sahibiyim; bu iki alanı bir araya getirerek yaratıcı ve işlevsel projeler üretmeye odaklanıyorum. </p>
+		<a href="bertan_ates_cv.pdf" download class="kapsayici">CV'yi İndir (PDF)</a>
 
-        <div id="tanitim"> <!-- web sitem için tanitim adında id tanımlıyorum -->
-            <h2>Knight Bilgisayar Dünyasına Hoş Geldiniz</h2> <!-- h2 etiketi ile başlık ekliyorum -->
-            <p>Knight Bilgisayar, en yeni teknolojiyi ve üstün tasarımı bir araya getiriyor. Yüksek performanslı ürünlerimizle hayallerinizin ötesine geçin.</p> <!--p etiketi ile paragraf özelliği vererek yazı ekliyorum -->
-        </div>
+			<div class="social-media">
+				<a href="https://instagram.com/b11_design" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+				<a href="https://behance.net/bertanate" target="_blank" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+				<a href="https://www.linkedin.com/in/bertan-ate%C5%9F-399985373/?trk=opento_sprofile_details" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+	</div>
 
-        <div id="urunler"> <!-- ürün resimlerine genel css vermek için urunler id tanımlıyorum -->
-            <h2>Öne Çıkan Ürünler</h2> <!-- Ürün başlığı ekliyorum -->
-            <div class="resim"> <!-- resimleri css ile hizalamak için resim adında sınıf tanımlıyorum -->
-                <div class="galeri"> <!-- resimlere galeri özelliği vermek için galeri adında sınnıf tanımlıyorum -->
-                   <a href="https://www.itopya.com/asus-tuf-gaming-f15-fx507zc4-hn211-i5-12500h-8gb-ddr4-512-gb-ssd-rtx3050-gddr6-4gb-156-full-hd-fre_u26553"> <img src="gorseller/laptop1.png" alt="Laptop 1"> </a> <!-- img src ile ürün resmini yüklüyorum --> <!--a etiketi ilgili sayfaya yönlendiriyorum-->
-                    <div class="yazi">Oyun Fırtınası</div> <!-- Ürün açıklaması ekliyorum -->
-                </div>
-            </div>
-            <div class="resim"> <!-- resimleri css ile hizalamak için resim adında sınıf tanımlıyorum -->
-                <div class="galeri"> <!-- resimlere galeri özelliği vermek için galeri adında sınnıf tanımlıyorum -->
-                    <a href="https://www.itopya.com/lenovo-loq-15irx9-i7-13650hx-8gb-ddr5-512gb-ssd-rtx4050-gddr6-6gb-105w-156-fhd-ips-144hz-g-sync-_u26204"> <img src="gorseller/laptop2.png" alt="Laptop 2"> </a> <!-- img src ile ürün resmini yüklüyorum -->  <!--a etiketi ilgili sayfaya yönlendiriyorum-->
-                    <div class="yazi">Gamer'ın Rüyası</div> <!-- Ürün açıklaması ekliyorum -->
-                </div>
-            </div>
-            <div class="resim"> <!-- resimleri css ile hizalamak için resim adında sınıf tanımlıyorum -->
-                <div class="galeri"> <!-- resimlere galeri özelliği vermek için galeri adında sınnıf tanımlıyorum -->
-                    <a href="https://www.monsternotebook.com.tr/oyuncu-klavyesi/pusat-rapid-pro-mekanik-oyuncu-klavyesi-siyah/"> <img src="gorseller/aksesuar3.png" alt="Aksesuar 1"> </a> <!-- img src ile ürün resmini yüklüyorum -->  <!--a etiketi ilgili sayfaya yönlendiriyorum-->
-                    <div class="yazi">Renk Fırtınası</div> <!-- Ürün açıklaması ekliyorum -->
-                </div>
-            </div>
-            <div class="resim"> <!-- resimleri css ile hizalamak için resim adında sınıf tanımlıyorum -->
-                <div class="galeri"> <!-- resimlere galeri özelliği vermek için galeri adında sınnıf tanımlıyorum -->
-                    <a href="https://www.monsternotebook.com.tr/oyuncu-klavyesi/pusat-rapid-ultra-mekanik-oyuncu-klavyesi-siyah/"> <img src="gorseller/aksesuar4.png" alt="Aksesuar 2"> </a> <!-- img src ile ürün resmini yüklüyorum -->  <!--a etiketi ilgili sayfaya yönlendiriyorum-->
-                    <div class="yazi">Parlayan Yıldız</div> <!-- Ürün açıklaması ekliyorum -->
-                </div>
-            </div>
-            <div class="temizle"></div> <!-- Float temizlemek için div id tanımlıyorum -->
-        </div>
+</div>
 
-       <div id="alt-menu"> <!-- Alt menü bölgesini içeren bir div oluşturuyorum. -->
-            <div class="dikeymenu"> <!-- Dikey menü için bir div oluşturuyorum. -->
-                <h3>Ürünler</h3> <!-- h3 etiketi ile Ürünler başlığı oluşturyorum. -->
-                <ul> <!-- ul li etiketleri ile dikey menü oluşturup a etiketi ile ilgili sayfaya yönlendiren bağlantı oluşturuyorum. -->
-                    <li><a href="https://www.teknosa.com/laptop-notebook-c-116004">Tüm Laptoplar</a></li> 
-                    <li><a href="laptoplar.html">Oyun Bilgisayarları</a></li>
-                    <li><a href="aksesuarlar.html">Oyuncu Ekipmanları</a></li> 
-                    <li><a href="https://www.teknosa.com/gaming-laptop-c-116006001">İş Bilgisayarları</a></li> 
-            </div> <!--altmenu div'ini kapatıyorum-->
+<div class="img-kapsayici">
+	<div class="img-kutu">
+		<div class="img-item">
+			<img src="ben.png">
+		</div>
+	</div>
+</div>
+</section>
 
-            <div class="dikeymenu">  <!-- Dikey menü için bir div oluşturuyorum. -->
-                <h3>Performans Donanımları</h3> <!-- h3 etiketi ile Performans Donanımları başlığı oluşturuyorum. -->
-                <ul> <!-- ul li etiketleri ile dikey menü oluşturup a etiketi ile ilgili sayfaya yönlendiren bağlantı oluşturuyorum. -->
-                    <li><a href="https://www.mediamarkt.com.tr/tr/category/laptop-504926.html?filter=processorModel:Core%20i5&utm_content=nonbrand&utm_source=google&utm_medium=cpc&utm_campaign=rt_search_generic_nsp_na_it-kategori-notebook&gad_source=1&gclid=Cj0KCQiAvvO7BhC-ARIsAGFyToUUoqsSPt_HZ3NaUiR_E__qAjhgglyA573jfQ8RnBZOomJufCUBTMcaArbJEALw_wcB&gclsrc=aw.ds">Intel i5 İşlemcili Laptoplar</a></li> 
-                    <li><a href="https://www.mediamarkt.com.tr/?utm_content=brand&utm_source=google&utm_medium=cpc&utm_campaign=rt_shopping_generic_nsp_na_pmax-other-heybooster&gad_source=1&gclid=Cj0KCQiAvvO7BhC-ARIsAGFyToVkuXWRdtfqOqZiX6osFHS2l0pvJXBqE8UpBZzNnNBlAt4bMAxND-YaAqFIEALw_wcB&gclsrc=aw.ds">Intel i7 İşlemcili Laptoplar</a></li> 
-                    <li><a href="https://www.vatanbilgisayar.com/corei9/notebook/">Intel i9 İşlemcili Laptoplar</a></li> 
-                    <li><a href="https://www.amazon.com/3050-laptop/s?k=3050+laptop">RTX 3050'li Laptoplar</a></li> 
-                </ul> <!--ul etiketi kapatıyorum-->
-            </div> <!--dikeymenu div'ini kapatıyorum-->
 
-            <div class="dikeymenu"> <!-- Dikey menü için bir div oluşturuyorum. -->
-                <h3>Kurumsal</h3> <!-- h3 etiketi ile Kurumsal başlığı oluşturuyorum. -->
-                <ul> <!-- ul li etiketleri ile dikey menü oluşturup a etiketi ile ilgili sayfaya yönlendiren bağlantı oluşturuyorum. -->
-                    <li><a href="hakkimizda.html">Knight Hakkında</a></li>
-                    <li><a href="kvkk.pdf" target="_blank">KVKK ve Yasal Haklar</a></li> <!--a etiketi içine pfd bağlantısı ekledim bu sayede yazıya tıklanıldı mı tarayıcıda pdf açıcak, target etiketi ile pdf yan sekmede açılıcak-->
-                </ul> <!--ul etiketi kapatıyorum-->
-            </div> <!--dikeymenu div'ini kapatıyorum-->
 
-            <div class="dikeymenu"> <!-- Dikey menü için bir div oluşturuyorum. -->
-                <h3>Knight Destek</h3> <!-- h3 etiketi ile Knight Destek başlığı oluşturyorum. -->
-                <ul> <!-- ul li etiketleri ile dikey menü oluşturup a etiketi ile ilgili sayfaya yönlendiren bağlantı oluşturuyorum. -->
-                    <li><a href="giris.html">Giriş Yap</a></li>
-                    <li><a href="mailto:bertanates23@istanbularel.edu.tr">Mail</a></li> <!-- a mailto ile bağlantıyı kendi mail adresime yönlendiriyorum-->
-                </ul> <!--ul etiketi kapatıyorum-->
-            </div> <!--dikeymenu div'ini kapatıyorum-->
-        </div> <!--altmenu div'ini kapatıyorum-->
+<section id="yetenekler">
+	<h2 class="basliklar">YETENEKLER</h2>
+	<div class="yetenekler-kapsayici">
+		<div class="yetenek-kategori">
+					<h3><i class="fa-solid fa-paintbrush"></i> Tasarım </h3>
+					<ul>
+						<li><i class="fa-solid fa-check-circle"></i> Adobe Photoshop</li>
+						<li><i class="fa-solid fa-check-circle"></i> Adobe Illustrator</li>
+						<li><i class="fa-solid fa-check-circle"></i> Adobe Indesign</li>
+						<li><i class="fa-solid fa-check-circle"></i> Canva</li>
+						
+					</ul>
+				</div>
 
-        <div id="alt-bar"> <!-footer alanı için altbar adında bir div oluşturuyorum-->
-            <p>&copy; 2025 Knight Bilgisayar. Tüm hakları saklıdır.</p> <!--p etiketleri arasında footer yazısı ekliyorum-->
-        </div> <!-altbar div'ini kapatıyorum-->
-    </div> <!-ana-kapsayici div'ini kapatıyorum-->
+				<div class="yetenek-kategori">
+					<h3><i class="fa-solid fa-code"></i> Software</h3>
+					<ul>
+						<li><i class="fa-solid fa-check-circle"></i> HTML</li>
+						<li><i class="fa-solid fa-check-circle"></i> CSS</li>
+						<li><i class="fa-solid fa-check-circle"></i> JavaScript</li>
+						<li><i class="fa-solid fa-check-circle"></i> Mysql & Oracle Sql</li>
+						<li><i class="fa-solid fa-check-circle"></i> Duyarlı Tasarım (Responsive Design)</li>
+						
+					</ul>
+				</div>
+		</div>
+</section>
+
+<section id="hizmetlerim">
+	<h2 class="basliklar">HİZMETLER</h2>
+	<div class="hizmet-kapsayici">
+		<div class="hizmetler">
+			<i class="fa-solid fa-laptop-code"></i>
+				<h3>Web Sitesi Geliştirme </h3>
+				<p>Modern ve kullanıcı dostu web siteleri tasarlıyor ve geliştiriyorum. Projeleriniz için hem estetik hem de işlevsel çözümler sunuyorum.</p>
+		</div>
+
+		<div class="hizmetler">
+			<i class="fa-solid fa-gem"></i>
+				<h3>Logo & Kurumsal Kimlik Tasarımı </h3>
+				<p>Markanızın hikayesini anlatan, akılda kalıcı logo tasarımları ve markanızın tüm görsel iletişimini kapsayan profesyonel kurumsal kimlik paketleri oluşturuyorum.</p>
+		</div>
+
+		<div class="hizmetler">
+			<i class="fa-solid fa-share-nodes"></i>
+				<h3>Sosyal Medya İçerik Tasarımı</h3>
+				<p>Sosyal medya hesaplarınız için markanızın kimliğine uygun, dikkat çekici postlar, hikayeler ve bannerlar hazırlayarak hedef kitlenizle bağ kurmanızı sağlıyorum.</p>
+		</div>
+
+		<div class="hizmetler">
+			<i class="fa-solid fa-newspaper"></i>
+				<h3>Dergi & Katalog Tasarımı</h3>
+				<p>Markanızın hikayesini, ürünlerinizi veya hizmetlerinizi etkileyici görseller ve profesyonel mizanpajlarla sunan dergi ve katalog tasarımları.</p>
+		</div>
+
+		<div class="hizmetler">
+			<i class="fa-solid fa-box"></i>
+				<h3>Ambalaj ve Etiket Tasarımı</h3>
+				<p>Ürünlerinizin raflarda öne çıkmasını sağlayacak yaratıcı ve işlevsel ambalaj tasarımları ve markanızın kimliğini yansıtan profesyonel etiket tasarımları.</p>
+		</div>
+
+		<div class="hizmetler">
+			<i class="fa-solid fa-book"></i>
+				<h3>Kapak Tasarımı </h3>
+				<p>Kitap, albüm veya rapor gibi projeleriniz için içeriğin ruhunu yansıtan etkileyici ve dikkat çekici kapak tasarımları.</p>
+		</div>
+
+		<div class="hizmetler">
+			<i class="fa-solid fa-wand-magic-sparkles"></i>
+				<h3>Fotoğraf Retouching</h3>
+				<p>Fotoğraflarınızdaki sivilce, leke gibi kusurları gidererek portrelerinizi ve ürün fotoğraflarınızı kusursuz hale getiriyorum.</p>
+		</div>
+
+		<div class="hizmetler">
+			<i class="fa-solid fa-palette"></i>
+				<h3>Fotoğraf Manipülasyonu</h3>
+				<p>Hayal gücünüzü gerçeğe dönüştürerek, sıradan fotoğrafları sanatsal ve dikkat çekici görsel kompozisyonlara dönüştürüyorum.</p>
+		</div>
+	</div>
+</section>
+
+<section id="calismalar">
+	<h2 class="basliklar">PORTFOLİO	</h2>
+	<div class="calismalar-kapsayici">
+
+		<div class="calismalarim">
+			<img src="post3.jpg" alt="Proje 1">
+			<div class="calismalar-info">
+					<h3>Logo & Kurumsal Kimlik Tasarımı:</h3>
+					<p>Markanızın hikayesini anlatan, akılda kalıcı logo tasarımları ve markanızın tüm görsel iletişimini kapsayan profesyonel kurumsal kimlik paketleri oluşturuyorum.</p>
+					<a href="#" class="btn-view">Detayları Gör</a>
+				</div>
+		</div>
+
+		<div class="calismalarim">
+			<img src="post3.jpg" alt="Proje 1">
+			<div class="calismalar-info">
+					<h3>E-ticaret Sitesi</h3>
+					<p>Tamamen duyarlı ve modern tasarıma sahip bir e-ticaret platformu.</p>
+					<a href="#" class="btn-view">Detayları Gör</a>
+				</div>
+		</div>
+
+		<div class="calismalarim">
+			<img src="post3.jpg" alt="Proje 1">
+			<div class="calismalar-info">
+					<h3>E-ticaret Sitesi</h3>
+					<p>Tamamen duyarlı ve modern tasarıma sahip bir e-ticaret platformu.</p>
+					<a href="#" class="btn-view">Detayları Gör</a>
+				</div>
+		</div>
+
+		<div class="calismalarim">
+			<img src="res.jpg" alt="Proje 1">
+			<div class="calismalar-info">
+					<h3>E-ticaret Sitesi</h3>
+					<p>Tamamen duyarlı ve modern tasarıma sahip bir e-ticaret platformu.</p>
+					<a href="https://www.behance.net/gallery/230859115/Photo-Manipulation" class="btn-view">Detayları Gör</a>
+				</div>
+		</div>
+
+		<div class="calismalarim">
+			<img src="res.jpg" alt="Proje 1">
+			<div class="calismalar-info">
+					<h3>E-ticaret Sitesi</h3>
+					<p>Tamamen duyarlı ve modern tasarıma sahip bir e-ticaret platformu.</p>
+					<a href="https://www.behance.net/gallery/230859115/Photo-Manipulation" class="btn-view">Detayları Gör</a>
+				</div>
+		</div>
+
+		<div class="calismalarim">
+			<img src="post3.jpg" alt="Proje 1">
+			<div class="calismalar-info">
+					<h3>E-ticaret Sitesi</h3>
+					<p>Tamamen duyarlı ve modern tasarıma sahip bir e-ticaret platformu.</p>
+					<a href="#" class="btn-view">Detayları Gör</a>
+				</div>
+		</div>
+	</div>
+</section>
+
+	<footer>
+		<div class="footer-links">
+			<a href="#hakkimda">HAKKIMDA</a>
+			<a href="#yetenekler">YETENEKLERİM</a>
+			<a href="#hizmetlerim">HİZMETLERİM</a>
+			<a href="#calismalar">PORTFOLİO</a>
+			
+		</div>
+		<p>&copy; 2025 Bertan Ateş. Tüm Hakları Saklıdır.</p>
+	</footer>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script>
+    // ScrollReveal'ı Başlatın
+    const sr = ScrollReveal({
+        reset: false,
+        distance: '80px',
+        duration: 1200,
+        easing: 'ease-in-out'
+    });
+
+    // Header elements
+
+    sr.reveal('.basliklar', { origin: 'bottom', interval: 200, delay: 300 });
+
+    sr.reveal('.logo', { origin: 'left', delay: 200 });
+    sr.reveal('.menu', { origin: 'top', interval: 100, delay: 300 });
+
+    // Hakkımda (About) Section
+    sr.reveal('.metin h1', { origin: 'left', delay: 400 });
+    sr.reveal('.hakkimda-text', { origin: 'left', delay: 400 });
+    sr.reveal('.img-kapsayici', { origin: 'right', delay: 400 });
+    sr.reveal('.metin p', { origin: 'left', delay: 600 });
+    sr.reveal('.kapsayici', { origin: 'bottom', delay: 800 });
+    sr.reveal('.social-media i', { origin: 'bottom', interval: 100, delay: 900 });
+
+    // Skills Section
+    sr.reveal('.basliklar', { origin: 'bottom', interval: 200, delay: 300 });
+    sr.reveal('.yetenekler-kapsayici ul li', { origin: 'left', interval: 50, delay: 500 });
+
+
+    // Services Section
+    sr.reveal('.hizmetler', { origin: 'top', interval: 150, delay: 300 });
+
+    // Portfolio Section
+    sr.reveal('.calismalarim', { origin: 'bottom', interval: 150, delay: 300 });
+
+    // Footer
+    sr.reveal('footer', { origin: 'bottom', delay: 200 });
+</script>
+
 </body>
 </html>
